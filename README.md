@@ -1,4 +1,4 @@
-ii# sol-auth
+# sol-auth
 
 ---
 
@@ -80,5 +80,6 @@ LogIn with JWT Token
 
     logInFunction()
 ```
-```
+
+
 
