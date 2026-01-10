@@ -2,7 +2,7 @@
 
 ---
 
-A package for the signIn and logIn with less code.
+A package for the signUp and logIn with less code.
 Just import and use it in your project.
 
 
@@ -76,6 +76,7 @@ const logInFunction = async () =>{
     
 ```
 <a href="https://www.buymeacoffee.com/satishsolen"><img src="https://img.buymeacoffee.com/button-api/?text=Buymeacoffee&emoji=&slug=satishsolen&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+
 
 
 
