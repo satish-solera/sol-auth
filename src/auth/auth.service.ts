@@ -1,12 +1,14 @@
 const bcrypt = require("bcrypt")
 const jwt = require("jsonwebtoken")
 
-interface signInput {
+interface signUpInput {
     username?: string,
     email?: string,
     password: string,
     salt: Number
 }
+
+
 
 interface logInput {
     username?: string,
@@ -19,7 +21,9 @@ interface logInput {
 }
 
 
-async function signIn({ username, email, password, salt }: signInput) {
+
+
+async function signUp({ username, email, password, salt }: signUpInput) {
 
     if (!((username || email) && password)) {
         return Error("Missing Field")
@@ -48,7 +52,9 @@ async function signIn({ username, email, password, salt }: signInput) {
 
     const hashPassword = await bcrypt.hash(password, salt)
 
-    return { username, email, hashPassword }
+    return { 
+        username , email, hashPassword 
+    }
 
 }
 
@@ -70,10 +76,9 @@ async function logIn({ username, email, password, hashPassword, payload, secret,
     }
 
 
-
     return { username, email, password: isPasswordValid, token }
 }
 
 
 
-module.exports = { signIn, logIn }
+module.exports = { signUp, logIn }
